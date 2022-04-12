@@ -49,7 +49,7 @@
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.textBoxNameProduct = new System.Windows.Forms.TextBox();
             this.labelCoupon = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelChange = new System.Windows.Forms.Label();
             this.labelTotalPrice = new System.Windows.Forms.Label();
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelProduct = new System.Windows.Forms.Label();
@@ -233,7 +233,7 @@
             this.groupBox1.Controls.Add(this.textBoxPrice);
             this.groupBox1.Controls.Add(this.textBoxNameProduct);
             this.groupBox1.Controls.Add(this.labelCoupon);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.labelChange);
             this.groupBox1.Controls.Add(this.labelTotalPrice);
             this.groupBox1.Controls.Add(this.labelPrice);
             this.groupBox1.Controls.Add(this.labelProduct);
@@ -290,14 +290,14 @@
             this.labelCoupon.TabIndex = 6;
             this.labelCoupon.Text = "ส่วนลด";
             // 
-            // label4
+            // labelChange
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 163);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 20);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "เงินทอน";
+            this.labelChange.AutoSize = true;
+            this.labelChange.Location = new System.Drawing.Point(6, 163);
+            this.labelChange.Name = "labelChange";
+            this.labelChange.Size = new System.Drawing.Size(54, 20);
+            this.labelChange.TabIndex = 5;
+            this.labelChange.Text = "เงินทอน";
             // 
             // labelTotalPrice
             // 
@@ -608,7 +608,7 @@
         private TextBox textBoxPrice;
         private TextBox textBoxNameProduct;
         private Label labelCoupon;
-        private Label label4;
+        private Label labelChange;
         private Label labelTotalPrice;
         private Label labelPrice;
         private Label labelProduct;

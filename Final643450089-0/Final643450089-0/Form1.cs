@@ -2,6 +2,8 @@ namespace Final643450089_0
 {
     public partial class Form1 : Form
     {
+        Product STD = new Product();
+
         SaleManagement saleManagement;
         Product product;
         Bill bill;
@@ -17,10 +19,10 @@ namespace Final643450089_0
         {
             this.sum1 += sum2;
             string Product = textBoxNameProduct.Text;
-            double Price = 0;
-            double TotalPrice = 0;
-            double Change = 0;
-            bool Coupon = false;
+            string Price = textBoxPrice.Text;
+            string TotalPrice = textBoxTotalPrice.Text;
+            string Change = textBoxChange.Text;
+            string Coupon = textBoxCoupon.Text;
 
             int n = dataGridView1.Rows.Add();
             dataGridView1.Rows[n].Cells[0].Value = Product;
@@ -29,24 +31,27 @@ namespace Final643450089_0
             dataGridView1.Rows[n].Cells[3].Value = Change;
             dataGridView1.Rows[n].Cells[4].Value = Coupon;
 
-            
+            /*int price = 0, total = 0, getChange = 0;
+            if (textBoxPrice.Text == "")
+            {
+                textBoxPrice.SelectAll();
+                return;
+            }
+            if(textBoxTotalPrice.Text == "")
+            {
+                textBoxTotalPrice.SelectAll();
+                return ;
+            }
+            price = Convert.ToInt32(textBoxPrice.Text);
+            TotalPrice = Convert.ToInt32(textBoxTotalPrice.Text);
+            Change = Price - TotalPrice;
+            textBoxTotalPrice.Text = Change;*/
+
         }
         private void displayProduct()
         {
             //this.pictureBoxA02s.Image = 
         }
-        //this.sum1 += sum2;
-
-        //    string User_or_Id = textBoxUserorId.Text;
-        //string Password = textBoxPassword.Text;
-
-        //int n = dataGridView1.Rows.Add();
-        //dataGridView1.Rows[n].Cells[0].Value = "Staff";
-        //    dataGridView1.Rows[n].Cells[1].Value = sum1;
-        //    dataGridView1.Rows[n].Cells[2].Value = User_or_Id;
-        //    dataGridView1.Rows[n].Cells[3].Value = Password;
-
-        //    textBoxUserorId.Text = "";
-        //    textBoxPassword.Text = "";
+        
     }
 }
