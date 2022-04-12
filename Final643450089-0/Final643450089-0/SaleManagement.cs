@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Final643450089_0
 {
-    internal class SaleManagement
+    internal class SaleManagement : Product
     {
     }
 }

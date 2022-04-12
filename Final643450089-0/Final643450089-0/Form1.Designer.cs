@@ -45,9 +45,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxCoupon = new System.Windows.Forms.TextBox();
             this.textBoxChange = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
+            this.textBoxNameProduct = new System.Windows.Forms.TextBox();
             this.labelCoupon = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.labelTotalPrice = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             this.ColumnPrice2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTotalPrice2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCoupon2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonA02 = new System.Windows.Forms.Button();
+            this.buttonA02s = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonA23 = new System.Windows.Forms.Button();
             this.buttonA52s = new System.Windows.Forms.Button();
@@ -116,13 +116,13 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // pictureBoxA02s
@@ -229,9 +229,9 @@
             // 
             this.groupBox1.Controls.Add(this.textBoxCoupon);
             this.groupBox1.Controls.Add(this.textBoxChange);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxTotalPrice);
+            this.groupBox1.Controls.Add(this.textBoxPrice);
+            this.groupBox1.Controls.Add(this.textBoxNameProduct);
             this.groupBox1.Controls.Add(this.labelCoupon);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.labelTotalPrice);
@@ -260,26 +260,26 @@
             this.textBoxChange.Size = new System.Drawing.Size(125, 27);
             this.textBoxChange.TabIndex = 10;
             // 
-            // textBox3
+            // textBoxTotalPrice
             // 
-            this.textBox3.Location = new System.Drawing.Point(119, 123);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 27);
-            this.textBox3.TabIndex = 9;
+            this.textBoxTotalPrice.Location = new System.Drawing.Point(119, 123);
+            this.textBoxTotalPrice.Name = "textBoxTotalPrice";
+            this.textBoxTotalPrice.Size = new System.Drawing.Size(125, 27);
+            this.textBoxTotalPrice.TabIndex = 9;
             // 
-            // textBox2
+            // textBoxPrice
             // 
-            this.textBox2.Location = new System.Drawing.Point(119, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 27);
-            this.textBox2.TabIndex = 8;
+            this.textBoxPrice.Location = new System.Drawing.Point(119, 82);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(125, 27);
+            this.textBoxPrice.TabIndex = 8;
             // 
-            // textBox1
+            // textBoxNameProduct
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 7;
+            this.textBoxNameProduct.Location = new System.Drawing.Point(119, 42);
+            this.textBoxNameProduct.Name = "textBoxNameProduct";
+            this.textBoxNameProduct.Size = new System.Drawing.Size(125, 27);
+            this.textBoxNameProduct.TabIndex = 7;
             // 
             // labelCoupon
             // 
@@ -334,6 +334,7 @@
             this.buttonSale.TabIndex = 1;
             this.buttonSale.Text = "Sale";
             this.buttonSale.UseVisualStyleBackColor = true;
+            this.buttonSale.Click += new System.EventHandler(this.buttonSale_Click);
             // 
             // dataGridView1
             // 
@@ -441,14 +442,14 @@
             this.ColumnCoupon2.Name = "ColumnCoupon2";
             this.ColumnCoupon2.Width = 125;
             // 
-            // buttonA02
+            // buttonA02s
             // 
-            this.buttonA02.Location = new System.Drawing.Point(58, 156);
-            this.buttonA02.Name = "buttonA02";
-            this.buttonA02.Size = new System.Drawing.Size(94, 29);
-            this.buttonA02.TabIndex = 13;
-            this.buttonA02.Text = "A02s";
-            this.buttonA02.UseVisualStyleBackColor = true;
+            this.buttonA02s.Location = new System.Drawing.Point(58, 156);
+            this.buttonA02s.Name = "buttonA02s";
+            this.buttonA02s.Size = new System.Drawing.Size(94, 29);
+            this.buttonA02s.TabIndex = 13;
+            this.buttonA02s.Text = "A02s";
+            this.buttonA02s.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -545,7 +546,7 @@
             this.Controls.Add(this.buttonA52s);
             this.Controls.Add(this.buttonA23);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.buttonA02);
+            this.Controls.Add(this.buttonA02s);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBoxA72);
@@ -603,9 +604,9 @@
         private GroupBox groupBox1;
         private TextBox textBoxCoupon;
         private TextBox textBoxChange;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox textBoxTotalPrice;
+        private TextBox textBoxPrice;
+        private TextBox textBoxNameProduct;
         private Label labelCoupon;
         private Label label4;
         private Label labelTotalPrice;
@@ -614,7 +615,7 @@
         private Button buttonSale;
         private DataGridView dataGridView1;
         private GroupBox groupBox2;
-        private Button buttonA02;
+        private Button buttonA02s;
         private Button button2;
         private Button buttonA23;
         private Button buttonA52s;

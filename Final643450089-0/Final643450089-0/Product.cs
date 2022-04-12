@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace Final643450089_0
 {
-    internal class Product
+    public class Product
     {
+        protected string Name;
+        protected double Price;
+
+        public string getName()
+        {
+            return this.Name;
+        }
+        public double getPrice()
+        {
+            return this.Price;
+        }
     }
 }
